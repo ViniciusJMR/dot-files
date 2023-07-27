@@ -1,0 +1,18 @@
+<application>
+  <component name="MaterialThemeConfig">
+    <option name="compactMenus" value="true" />
+    <option name="compactStatusBar" value="true" />
+    <option name="compactDropdowns" value="true" />
+    <option name="isCompactMenus" value="true" />
+    <option name="isCompactStatusBar" value="true" />
+    <option name="isWizardShown" value="true" />
+    <option name="treeFontSizeEnabled" value="true" />
+    <option name="tabFontSizeEnabled" value="true" />
+    <option name="indicatorStyle" value="None" />
+    <option name="accentColor" value="f9826c" />
+    <option name="selectedTheme" value="GITHUB_DARK" />
+    <option name="userId" value="2920f12f:1891f202ba5:-8000" />
+    <option name="version" value="7.14.2" />
+    <option name="tabHighlightPosition" value="Bottom" />
+  </component>
+</application>

@@ -1,0 +1,4 @@
+IdeaVIM
+com.chrisrm.idea.MaterialThemeUI
+com.intellij.marketplace
+com.mallowigi

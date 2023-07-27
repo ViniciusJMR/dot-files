@@ -1,0 +1,24 @@
+<application>
+  <component name="AndroidLogcatFilterHistory">
+    <option name="mostRecentlyUsed" value="package:dev.vinicius.todoapp " />
+    <option name="nonFavorites">
+      <list>
+        <option value="package:dev.vinicius.todoapp " />
+        <option value="package:dev.vinicius.todoapp SAVE" />
+        <option value="dev" />
+        <option value="LISTener" />
+        <option value="LIST" />
+        <option value="dev.vinicius.todoapp " />
+        <option value="dev.vinicius.todoapp" />
+        <option value="package:dev.vinicius.todoapp ADD CL" />
+        <option value="dev." />
+        <option value="VIEWMODEL_TAG" />
+        <option value="TAG" />
+        <option value="room" />
+        <option value="migrate" />
+        <option value="package:dev.vinicius.todoapp" />
+        <option value="package:dev.vinicius." />
+      </list>
+    </option>
+  </component>
+</application>
