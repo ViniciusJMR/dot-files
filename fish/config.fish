@@ -4,5 +4,17 @@ if status is-interactive
     set -g fish_escape_delay_ms 30
     alias ga="git add"
     alias gc="git commit -m"
+    alias gp="git pull"
+    alias gpsh="git push"
+    alias gl="git log"
+    alias gb="git branch"
+    alias gbd="git branch -d"
+    alias gck="git checkout"
+    alias gckb="git checkout -b"
     alias code="/home/viniciusrodrigues/.vscodeide/bin/code"
+
+    set -Ux CHATGPT_MODEL gpt-4
+    set -Ux azure_key 5b3d5a7b8e3b4f6d827b44eb71bcf0f1
+    set -Ux azure_region eastus
+    set -Ux open_api_key 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
 end
