@@ -1,6 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export CHATGPT_MODEL:gpt\x2d4
 SETUVAR __fish_initialized:3400
+SETUVAR --export azure_key:5b3d5a7b8e3b4f6d827b44eb71bcf0f1
+SETUVAR --export azure_region:eastus
 SETUVAR fish_color_autosuggestion:9C9C9C
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:F4F4F4
@@ -40,3 +43,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
+SETUVAR --export open_api_key:sk\x2dPkwu7iqhcBuBKVDw7UIbT3BlbkFJwxbofUhKBe9IDA8ZCV5i
