@@ -1,17 +1,20 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export CHATGPT_MODEL:gpt\x2d4
+SETUVAR --export --path GOPATH:/home/viniciusrodrigues/golib
+SETUVAR --export --path PATH:/home/viniciusrodrigues/\x2easdf/shims\x1e/home/viniciusrodrigues/golib/bin\x1e/opt/asdf\x2dvm/bin\x1e/home/viniciusrodrigues/golib/bin\x1e/usr/local/bin\x1e/home/viniciusrodrigues/golib/bin\x1e/usr/bin\x1e/home/viniciusrodrigues/golib/bin\x1e/usr/local/sbin\x1e/home/viniciusrodrigues/golib/bin\x1e/var/lib/flatpak/exports/bin\x1e/home/viniciusrodrigues/golib/bin\x1e/usr/bin/site_perl\x1e/home/viniciusrodrigues/golib/bin\x1e/usr/bin/vendor_perl\x1e/home/viniciusrodrigues/golib/bin\x1e/usr/bin/core_perl\x1e/home/viniciusrodrigues/golib/bin
+SETUVAR --export SCRIPT_DIR:\x2econfig/i3blocks/scripts
 SETUVAR __fish_initialized:3400
 SETUVAR --export azure_key:5b3d5a7b8e3b4f6d827b44eb71bcf0f1
 SETUVAR --export azure_region:eastus
-SETUVAR fish_color_autosuggestion:9C9C9C
+SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2d\x2dreverse
-SETUVAR fish_color_command:F4F4F4
-SETUVAR fish_color_comment:B0B0B0
+SETUVAR fish_color_command:b294bb
+SETUVAR fish_color_comment:f0c674
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red
-SETUVAR fish_color_end:969696
-SETUVAR fish_color_error:FFA779
+SETUVAR fish_color_end:b294bb
+SETUVAR fish_color_error:cc6666
 SETUVAR fish_color_escape:00a6b2
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
@@ -21,9 +24,9 @@ SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:00a6b2
 SETUVAR fish_color_option:\x1d
-SETUVAR fish_color_param:A0A0F0
-SETUVAR fish_color_quote:666A80
-SETUVAR fish_color_redirection:FAFAFA
+SETUVAR fish_color_param:81a2be
+SETUVAR fish_color_quote:b5bd68
+SETUVAR fish_color_redirection:8abeb7
 SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red

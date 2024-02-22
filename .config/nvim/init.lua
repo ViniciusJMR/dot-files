@@ -16,5 +16,6 @@ require("vjmr")
 
 require('lazy').setup('plugins')
 
-vim.cmd.colorscheme "catppuccin-frappe"
+vim.opt.termguicolors = true
+vim.cmd.colorscheme 'melange'
 

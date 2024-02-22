@@ -20,9 +20,16 @@ if status is-interactive
     alias grs="git reset --soft"
     alias gdf="git diff"
     alias code="/home/viniciusrodrigues/.vscodeide/bin/code"
+    alias files="xdg-open"
+    alias vi="nvim"
 
     set -Ux CHATGPT_MODEL gpt-4
     set -Ux azure_key 5b3d5a7b8e3b4f6d827b44eb71bcf0f1
     set -Ux azure_region eastus
     set -Ux open_api_key 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
+
+    fish_add_path $GOPATH/bin
+    
+
+     xrandr --output eDP-1 --right-of HDMI-1
 end

@@ -25,10 +25,17 @@ return {
             {'L3MON4D3/LuaSnip'}
         },
     },
+    {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+    },
 
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "savq/melange-nvim" },
 
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    "nvim-treesitter/nvim-treesitter-context",
     'nvim-treesitter/playground',
     "theprimeagen/harpoon",
     "mbbill/undotree",
@@ -43,6 +50,5 @@ return {
     'hrsh7th/cmp-nvim-lua',
     'L3MON4D3/LuaSnip',
     'rafamadriz/friendly-snippets',
-
-
+    'rmagatti/goto-preview',
 }
