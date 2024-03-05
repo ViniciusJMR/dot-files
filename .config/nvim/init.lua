@@ -19,3 +19,10 @@ require('lazy').setup('plugins')
 vim.opt.termguicolors = true
 vim.cmd.colorscheme 'melange'
 
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    },
+})
+
+

@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local lspconfig = require('lspconfig')
 
 lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
@@ -24,6 +25,23 @@ require('mason-lspconfig').setup({
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
     end,
+    html = function ()
+        lspconfig.html.setup({
+            filetypes = { "html", "templ" },
+        })
+    end,
+    htmx = function ()
+        lspconfig.htmx.setup({
+            filetypes = { "html", "templ" },
+        })
+    end,
+    tailwindcss = function ()
+        lspconfig.htmx.setup({
+            filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+            init_options = { userLanguages = { templ = "html" } },
+        })
+    end,
+
   }
 })
 

@@ -4,10 +4,13 @@ if status is-interactive
     set -g fish_escape_delay_ms 30
     alias g="git"
     alias ga="git add"
+    alias gap="git add -p"
     alias gc="git commit -m"
     alias gp="git pull"
     alias gpsh="git push"
     alias gpshu="git push -u"
+    alias gsth="git stash"
+    alias gsthp="git stash"
     alias gsts="git status"
     alias gl="git log"
     alias glo="git log --oneline"
@@ -23,13 +26,5 @@ if status is-interactive
     alias files="xdg-open"
     alias vi="nvim"
 
-    set -Ux CHATGPT_MODEL gpt-4
-    set -Ux azure_key 5b3d5a7b8e3b4f6d827b44eb71bcf0f1
-    set -Ux azure_region eastus
-    set -Ux open_api_key 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
-
     fish_add_path $GOPATH/bin
-    
-
-     xrandr --output eDP-1 --right-of HDMI-1
 end
