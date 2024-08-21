@@ -43,7 +43,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set Monitor 1 to the right of Monitor 2
-exec xrandr --output eDP-1 --right-of HDMI-1
+exec xrandr --output eDP-1 --left-of HDMI-1
 
 # Set background
 exec --no-startup-id nitrogen --restore
@@ -99,8 +99,8 @@ set $defBrowser "google-chrome-stable"
 bindsym $mod+b exec $defBrowser
 
 # Open file manager
-set $fileManager "com.raggesilver.BlackBox -c lf"
-bindsym $mod+Shift+f exec $fileManager
+set $fileManager 'com.raggesilver.BlackBox -c "ranger"'
+bindsym $mod+Shift+f exec export EDITOR='nvim' && com.raggesilver.BlackBox -c "ranger"
 
 # kill focused window
 bindsym $mod+q kill
