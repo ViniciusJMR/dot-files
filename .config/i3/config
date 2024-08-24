@@ -95,7 +95,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec com.raggesilver.BlackBox
 
 # start a browser
-set $defBrowser "google-chrome-stable"
+set $defBrowser "zen-browser"
 bindsym $mod+b exec $defBrowser
 
 # Open file manager
