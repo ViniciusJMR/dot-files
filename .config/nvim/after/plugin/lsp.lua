@@ -36,10 +36,20 @@ require('mason-lspconfig').setup({
         })
     end,
     tailwindcss = function ()
-        lspconfig.htmx.setup({
+        lspconfig.tailwindcss.setup({
             filetypes = { "templ", "astro", "javascript", "typescript", "react" },
-            init_options = { userLanguages = { templ = "html" } },
+            settings = {
+                tailwindCSS = {
+                    includeLanguages = {
+                        templ = "html",
+                    },
+                },
+            }
         })
+        -- lspconfig.htmx.setup({
+        --     filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+        --     init_options = { userLanguages = { templ = "html" } },
+        -- })
     end,
 
   }

@@ -1,11 +1,6 @@
 return {
     {
         "supermaven-inc/supermaven-nvim",
-        config = function()
-            require("supermaven-nvim").setup({
-                ignore_filetypes = { go = true },
-            })
-        end,
     },
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
