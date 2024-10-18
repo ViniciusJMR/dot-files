@@ -49,6 +49,7 @@ exec xrandr --output eDP-1 --left-of HDMI-1
 exec --no-startup-id nitrogen --restore
 
 # Use pactl to adjust volume in PulseAudio.
+bindsym $mod+p exec pavucontrol
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -95,7 +96,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec com.raggesilver.BlackBox
 
 # start a browser
-set $defBrowser "zen-browser"
+set $defBrowser "GTK_IM_MODULE=xim zen-browser"
 bindsym $mod+b exec $defBrowser
 
 # Open file manager
