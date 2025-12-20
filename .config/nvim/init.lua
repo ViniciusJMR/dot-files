@@ -17,7 +17,7 @@ require("vjmr")
 require('lazy').setup('plugins')
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme 'tokyonight'
+vim.cmd.colorscheme 'rose-pine-moon'
 
 vim.filetype.add({
     extension = {

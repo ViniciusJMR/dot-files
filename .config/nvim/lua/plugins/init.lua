@@ -8,6 +8,7 @@ return {
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {'folke/tokyonight.nvim'},
+    { "rose-pine/neovim", name = "rose-pine" },
     -- LSP Support
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -39,6 +40,14 @@ return {
         dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
     },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {
+        'AlexvZyl/nordic.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require('nordic').load()
+        end
+    },
     { "savq/melange-nvim" },
 
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},

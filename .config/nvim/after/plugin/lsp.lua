@@ -1,6 +1,11 @@
 local lsp_zero = require('lsp-zero')
 local lspconfig = require('lspconfig')
 
+-- -- Define global capabilities
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- capabilities.workspace = capabilities.workspace or {}
+-- capabilities.workspace.didChangeWatchedFiles = { dynamicRegistration = true }
+
 lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -16,43 +21,57 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+-- lsp_zero.extend_lspconfig({
+--   capabilities = capabilities
+-- })
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {'rust_analyzer'},
-  handlers = {
-    lsp_zero.default_setup,
-    lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
-    end,
-    html = function ()
-        lspconfig.html.setup({
-            filetypes = { "html", "templ" },
-        })
-    end,
-    htmx = function ()
-        lspconfig.htmx.setup({
-            filetypes = { "html", "templ" },
-        })
-    end,
-    tailwindcss = function ()
-        lspconfig.tailwindcss.setup({
-            filetypes = { "templ", "astro", "javascript", "typescript", "react" },
-            settings = {
-                tailwindCSS = {
-                    includeLanguages = {
-                        templ = "html",
+    handlers = {
+        -- function(server)
+        --     lsp_zero.default_setup(server, { capabilities = capabilities })
+        -- end,
+        lsp_zero.default_setup,
+        lua_ls = function()
+            local lua_opts = lsp_zero.nvim_lua_ls()
+            -- lua_opts.capabilities = capabilities
+            require('lspconfig').lua_ls.setup(lua_opts)
+        end,
+        html = function()
+            lspconfig.html.setup({
+                filetypes = { "html", "templ" },
+            })
+        end,
+        htmx = function()
+            lspconfig.htmx.setup({
+                filetypes = { "html", "templ" },
+            })
+        end,
+        tailwindcss = function()
+            lspconfig.tailwindcss.setup({
+                filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+                settings = {
+                    tailwindCSS = {
+                        includeLanguages = {
+                            templ = "html",
+                        },
                     },
-                },
-            }
-        })
-        -- lspconfig.htmx.setup({
-        --     filetypes = { "templ", "astro", "javascript", "typescript", "react" },
-        --     init_options = { userLanguages = { templ = "html" } },
-        -- })
-    end,
-
-  }
+                }
+            })
+            -- lspconfig.htmx.setup({
+            --     filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+            --     init_options = { userLanguages = { templ = "html" } },
+            -- })
+        end,
+        gdtoolkit = function()
+            local root = vim.fs.dirname(vim.fs.find('project.godot', { upward = true })[1])
+            lspconfig.gdscript.setup{cmd = {"ncat", "localhost","6005"}, root_dir = function()
+                return root
+            end
+        }
+        end,
+    }
 })
 
 local cmp = require('cmp')
