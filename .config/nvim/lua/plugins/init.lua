@@ -34,9 +34,9 @@ return {
         },
     },
     {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {} -- this is equalent to setup({}) function
     },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {
@@ -74,5 +74,11 @@ return {
         dependencies = { "rmagatti/logger.nvim" },
         event = "BufEnter",
         config = true, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
+    },
+    {
+        "neanias/everforest-nvim",
+        version = false,
+        lazy = false,
+        priority = 1000, -- make sure to load this before all the other start plugins
     },
 }
